@@ -9,10 +9,13 @@ sudo docker build -t mycat:1.6.7.4 .
 启动mycat
 
 ```bash
+# 拉取镜像
+docker pull docker98/mycat:latest
+
+# 启动
 sudo docker run -d --name mycat \
 -p 8066:8066 -p 9066:9066 \
 -v /home/fvad/mycat/conf/:/usr/local/mycat/conf/ \
 -v /home/fvad/mycat/logs/:/usr/local/mycat/logs/ \
 mycat:1.6.7.4
 ```
-
